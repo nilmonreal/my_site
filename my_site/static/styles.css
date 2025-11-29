@@ -1,0 +1,37 @@
+/* --- GLOBAL STYLES.CSS --- */
+
+/* 1. Import Fonts (Available everywhere) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Merriweather:ital,wght@0,300;0,700;1,300&display=swap');
+
+/* 2. Define Variables (The "DNA") */
+:root {
+    --primary-color: #E30613; /* PSOE Red */
+    --primary-dark: #b3000a;
+    --text-dark: #1a1a1a;
+    --text-gray: #666;
+    --bg-light: #f8f9fa;
+    
+    /* Shadows */
+    --card-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    --hover-shadow: 0 12px 24px rgba(227, 6, 19, 0.15);
+}
+
+/* 3. Global Reset */
+body {
+    background-color: var(--bg-light);
+    font-family: 'Inter', sans-serif;
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+/* 4. Global Links */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 5. Utility Classes (Helpers) */
+.text-center { text-align: center; }
+.mt-20 { margin-top: 20px; }

@@ -1,0 +1,37 @@
+.navbar {
+    background: white;
+    padding: 15px 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    display: flex; /* Lines up Logo and Links */
+    justify-content: space-between; /* Pushes Logo left, Links right */
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-brand {
+    font-family: 'Merriweather', serif;
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: #1a1a1a;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex; /* Ensures links sit side-by-side */
+    gap: 20px;     /* Space between links */
+}
+
+.nav-links a {
+    color: #1a1a1a;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+}
+
+.nav-links a:hover {
+    color: #E30613;
+}

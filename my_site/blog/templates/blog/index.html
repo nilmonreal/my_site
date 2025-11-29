@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'blog/blog.css' %}">
+{% endblock %}
+
+{% block title %} Nexo {% endblock %}
+
+{% block content %}
+
+    <div style="text-align: center; padding: 60px 20px 20px;">
+        <h1 style="font-size: 3rem; margin-bottom: 10px; color: #1a1a1a;">¿En qué anda el <span style="color: #E30613;">PSOE</span>?</h1>
+        <p style="color: #666; font-size: 1.2rem;">Las últimas novedades seleccionadas para ti.</p>
+    </div>
+
+    <div class="grid">  
+        {% for post in posts %}
+            <div class="card">
+                <div class="card-image-wrapper">
+                    <span class="card-badge">Noticias</span>
+                    <img src="{{ post.image }}" alt="{{ post.title }}">
+                </div>
+
+                <div class="card-content">
+                    <span class="card-date">{{ post.date }}</span>
+                    <h3>{{ post.title }}</h3>
+                    <p>{{ post.excerpt }}</p>
+                    <a href="{{ post.link }}" target="_blank" class="btn-card">LEER NOTICIA &rarr;</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <div style="text-align: center; margin: 50px 0 80px;">
+        <a href="{% url 'posts_list' %}" class="main-btn">Ver Archivo Completo</a>
+    </div>
+
+    <style>
+        .main-btn {
+            background: linear-gradient(135deg, #E30613 0%, #b3000a 100%);
+            color: white;
+            padding: 16px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            box-shadow: 0 10px 20px rgba(227, 6, 19, 0.3);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .main-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 25px rgba(227, 6, 19, 0.4);
+        }
+    </style>
+    
+{% endblock %}
